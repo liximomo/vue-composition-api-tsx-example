@@ -1,4 +1,4 @@
-import './HelloWorld.css';
+import style from './HelloWorld.module.css';
 import { ref, createComponent } from '@vue/composition-api';
 
 export default createComponent({
@@ -10,13 +10,8 @@ export default createComponent({
     },
   } as const,
   setup(props) {
-    const a = ref(0);
-    const onClick = () => {
-      a.value++;
-    };
-
     return () => (
-      <div class="hello">
+      <div>
         <h1>{props.msg}</h1>
         <p>
           For a guide and recipes on how to configure / customize this project,
@@ -27,10 +22,11 @@ export default createComponent({
           </a>
           .
         </p>
-        <h3>Installed CLI Plugins</h3>
-        <ul>
-          <li>
+        <h3 class={style.listTitle}>Installed CLI Plugins</h3>
+        <ul class={style.list}>
+          <li class={style.item}>
             <a
+              class={style.link}
               href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
               target="_blank"
               rel="noopener"
@@ -38,8 +34,9 @@ export default createComponent({
               babel
             </a>
           </li>
-          <li>
+          <li class={style.item}>
             <a
+              class={style.link}
               href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
               target="_blank"
               rel="noopener"
@@ -48,48 +45,84 @@ export default createComponent({
             </a>
           </li>
         </ul>
-        <h3>Essential Links</h3>
-        <ul>
-          <li>
-            <a href="https://vuejs.org" target="_blank" rel="noopener">
+        <h3 class={style.listTitle}>Essential Links</h3>
+        <ul class={style.list}>
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://vuejs.org"
+              target="_blank"
+              rel="noopener"
+            >
               Core Docs
             </a>
           </li>
-          <li>
-            <a href="https://forum.vuejs.org" target="_blank" rel="noopener">
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://forum.vuejs.org"
+              target="_blank"
+              rel="noopener"
+            >
               Forum
             </a>
           </li>
-          <li>
-            <a href="https://chat.vuejs.org" target="_blank" rel="noopener">
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://chat.vuejs.org"
+              target="_blank"
+              rel="noopener"
+            >
               Community Chat
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://twitter.com/vuejs"
+              target="_blank"
+              rel="noopener"
+            >
               Twitter
             </a>
           </li>
-          <li>
-            <a href="https://news.vuejs.org" target="_blank" rel="noopener">
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://news.vuejs.org"
+              target="_blank"
+              rel="noopener"
+            >
               News
             </a>
           </li>
         </ul>
-        <h3>Ecosystem</h3>
-        <ul>
-          <li>
-            <a href="https://router.vuejs.org" target="_blank" rel="noopener">
+        <h3 class={style.listTitle}>Ecosystem</h3>
+        <ul class={style.list}>
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://router.vuejs.org"
+              target="_blank"
+              rel="noopener"
+            >
               vue-router
             </a>
           </li>
-          <li>
-            <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">
+          <li class={style.item}>
+            <a
+              class={style.link}
+              href="https://vuex.vuejs.org"
+              target="_blank"
+              rel="noopener"
+            >
               vuex
             </a>
           </li>
-          <li>
+          <li class={style.item}>
             <a
+              class={style.link}
               href="https://github.com/vuejs/vue-devtools#vue-devtools"
               target="_blank"
               rel="noopener"
@@ -97,8 +130,9 @@ export default createComponent({
               vue-devtools
             </a>
           </li>
-          <li>
+          <li class={style.item}>
             <a
+              class={style.link}
               href="https://vue-loader.vuejs.org"
               target="_blank"
               rel="noopener"
@@ -106,8 +140,9 @@ export default createComponent({
               vue-loader
             </a>
           </li>
-          <li>
+          <li class={style.item}>
             <a
+              class={style.link}
               href="https://github.com/vuejs/awesome-vue"
               target="_blank"
               rel="noopener"
