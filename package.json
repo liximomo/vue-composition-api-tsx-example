@@ -1,0 +1,22 @@
+{
+  "name": "vue-composition-api-tsx-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@vue/composition-api": "^0.3.1",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-typescript": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "babel-preset-vca-jsx": "^0.1.0",
+    "typescript": "^3.5.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
