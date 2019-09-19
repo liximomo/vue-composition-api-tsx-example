@@ -1,5 +1,5 @@
 import style from './HelloWorld.module.css';
-import { ref, createComponent } from '@vue/composition-api';
+import { createComponent, PropType } from '@vue/composition-api';
 
 export default createComponent({
   name: 'HelloWorld',
@@ -8,11 +8,18 @@ export default createComponent({
       type: String,
       required: true,
     },
-  } as const,
+    // Note that this prop must not start with on, otherwise Babel plugin will catch it and process 
+    // it as an event listener and store it to setupContext.listeners.
+    // For type-safety, we should use function props instead of vue listeners. The prefix "event" is
+    // for consistence.
+    eventClick: {
+      type: (null as unknown) as PropType<(event: MouseEvent) => void>,
+    }
+  },
   setup(props) {
     return () => (
       <div>
-        <h1>{props.msg}</h1>
+        <h1 onClick={props.eventClick}>{props.msg}</h1>
         <p>
           For a guide and recipes on how to configure / customize this project,
           <br />

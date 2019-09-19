@@ -8,8 +8,11 @@ export default createComponent({
   setup() {
     return () => (
       <div id="app">
-        <img alt="Vue " src={ImageLogo} />
-        <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+        <img alt="Vue" src={ImageLogo} />
+        <HelloWorld
+          msg="Welcome to Your Vue.js + TypeScript App"
+          eventClick={e => console.log('click', e.target)}
+        />
       </div>
     );
   },

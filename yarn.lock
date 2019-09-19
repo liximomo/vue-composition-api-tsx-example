@@ -980,10 +980,10 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
-"@vue/composition-api@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.npm.taobao.org/@vue/composition-api/download/@vue/composition-api-0.3.1.tgz#bcfecd9b4112685b16699163e6e5eca112ea1ae6"
-  integrity sha1-vP7Nm0ESaFsWaZFj5uXsoRLqGuY=
+"@vue/composition-api@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.npm.taobao.org/@vue/composition-api/download/@vue/composition-api-0.3.2.tgz#2d797028e489bf7812f08c7bb33ffd03ef23c617"
+  integrity sha1-LXlwKOSJv3gS8Ix7sz/9A+8jxhc=
   dependencies:
     tslib "^1.9.3"
 

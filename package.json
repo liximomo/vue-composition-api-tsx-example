@@ -7,7 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@vue/composition-api": "^0.3.1",
+    "@vue/composition-api": "^0.3.2",
     "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
