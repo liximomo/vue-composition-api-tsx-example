@@ -1,11 +1,12 @@
 import './App.css';
-import { createComponent } from '@vue/composition-api';
+import { defineComponent, SetupContext } from '@vue/composition-api';
 import HelloWorld from './components/HelloWorld';
 import ImageLogo from './assets/logo.png';
 
-export default createComponent({
+export default defineComponent({
   name: 'App',
-  setup() {
+  setup(props, ctx: SetupContext) {
+    const h = ctx.root.$createElement
     return () => (
       <div id="app">
         <img alt="Vue" src={ImageLogo} />

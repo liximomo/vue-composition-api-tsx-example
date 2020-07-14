@@ -7,15 +7,15 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "@vue/composition-api": "^0.3.2",
+    "@vue/composition-api": "^1.0.0-beta.3",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "vue": "^2.6.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-typescript": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
-    "babel-preset-vca-jsx": "^0.1.0",
+    "babel-preset-vca-jsx": "^0.3.5",
     "typescript": "^3.5.2",
     "vue-template-compiler": "^2.6.10"
   }
