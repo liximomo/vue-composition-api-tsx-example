@@ -1,7 +1,7 @@
 import style from './HelloWorld.module.css';
-import { createComponent, PropType } from '@vue/composition-api';
+import { defineComponent, PropType } from '@vue/composition-api';
 
-export default createComponent({
+export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: {
@@ -16,7 +16,7 @@ export default createComponent({
       type: (null as unknown) as PropType<(event: MouseEvent) => void>,
     }
   },
-  setup(props) {
+  setup(props: any) {
     return () => (
       <div>
         <h1 onClick={props.eventClick}>{props.msg}</h1>
